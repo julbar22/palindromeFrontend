@@ -1,0 +1,16 @@
+#root {
+  min-height: 100vh;
+  background-color: #e5e5e5;
+}
+
+.w-60{
+  width: 60% !important;
+}
+
+.w-70{
+  width: 70% !important;
+}
+
+.min-vh-75{
+  min-height: 75vh;
+}
