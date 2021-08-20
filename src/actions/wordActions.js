@@ -12,8 +12,6 @@ export function addWord(word) {
 
         const response = await window.fetch(`${baseUrl}iecho?text=${word}`);
         const text = await response.json();
-        console.log(response);
-        console.log(text);
         if (response.ok) {
             dispatch(addWordSuccess(text));
         } else {

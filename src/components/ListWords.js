@@ -11,20 +11,24 @@ const ListWords = () => {
                     <h2>Results:</h2>
                 </div>
                 {error ? (
-                    <div className="alert alert-danger col-auto" role="alert">
+                    <div className="alert alert-danger col-auto" role="alert"
+                        data-testid="alertError"
+                    >
                         {error}
                     </div>
                 ) : null}
 
             </div>
-
-            {words.length === 0 ? 'No data' :
-                (
-                    words.map((word, i) =>
-                        <Word key={`${i}word`} word={word} />
+            <div data-testid="listWords">
+                {words.length === 0 ? 'No data' :
+                    (
+                        words.map((word, i) =>
+                            <Word key={`${i}word`} word={word} data-testid={`${i}word`} />
+                        )
                     )
-                )
-            }
+                }
+            </div>
+
         </div>
 
     );
